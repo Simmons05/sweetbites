@@ -1,0 +1,197 @@
+{%load static%}
+<!DOCTYPE html>
+<lang="en-us">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>SHOPIKA|Get cool Relaxation</title>
+        <link rel="stylesheet" href="{% static 'room.css'%}">
+        <script src="{%static 'jquery.min.js'%}"></script>
+    </head>
+    <body>
+        <h1>Amazing Rooms</h1>
+        <div class="beds-panel">
+            {%for room in rooms%}
+                <div class="card" id="fram">
+                    <div class="picture" id="pic">
+                        <span>{{room.room_id}}</span>
+                        {%if room.room_booked%}
+                            <span class="padlock"></span>
+                        {%endif%}
+                    </div>
+                </div>
+            {%endfor%}
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                   <img id="imag" src="static/rooms/beds-1Adult.jpeg" data-price="Kes 4900" data-description="Kilimanjaro">
+                </div>
+                <h2 id="description">Bed for 1 Adult<h2>
+                <h3 id="price">Kes 4900</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-1Adult-A.jpeg" data-price="Kes 5100" data-description="Elgon">
+                </div>
+                <h2 id="description">Bed for 1 Adult<h2>
+                <h3 id="price">Kes 5100</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-1Adult-B.jpeg" data-price="Kes 5500" data-description="Ruwenzori">
+                </div>
+                <h2 id="description">Bed for 1 Adult<h2>
+                <h3 id="price">Kes 5500</h3>
+            </div>
+         <div class="card" id="fram">
+             <div class="picture" id="pic">
+                 <img id="imag" src="static/rooms/beds-1Adult-C.jpeg" data-price="Kes 5900" data-description="Aberdare">
+              </div>
+              <h2 id="description">Bed for 1 Adult<h2>
+              <h3 id="price">Kes 5900</h3>
+         </div>
+         <div class="card" id="fram">
+             <div class="picture" id="pic">
+                 <img id="imag" src="static/rooms/beds-1Adult-D.jpeg" data-price="Kes 6700" data-description="Dranensberg">
+              </div>
+              <h2 id="description">Bed for 1 Adult<h2>
+              <h3 id="price">Kes 6700</h3>
+         </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-2Adults.jpeg" data-price="Kes 7600" data-description="Simien">
+                 </div>
+                 <h2 id="description">Bed for 2 Adults<h2>
+                 <h3 id="price">Kes 7600</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="/static/rooms/beds-2Adults-A.jpeg" data-price="Kes 7500" data-description="Bintimani">
+                 </div>
+                 <h2 id="description">Bed for 2 Adults<h2>
+                 <h3 id="price">Kes 7500</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-2Adults-B.jpeg" data-price="Kes 7100" data-description="Stanley">
+                 </div>
+                 <h2 id="description">Bed for 2 Adults<h2>
+                 <h3 id="price">Kes 7100</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-2Adults-C.jpeg" data-price="Kes 7300" data-description="Speke">
+                 </div>
+                 <h2 id="description">Bed for 2 Adults<h2>
+                 <h3 id="price">Kes 7300</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-2Adults-D.jpeg" data-price="Kes 7500" data-description="Pico Basile">
+                 </div>
+                 <h2 id="description">Bed for 2 Adults<h2>
+                 <h3 id="price">Kes 7500</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-2Adults-E.jpeg" data-price="Kes 7900" data-description="Emin">
+                 </div>
+                 <h2 id="description">Bed for 2 Adults<h2>
+                 <h3 id="price">Kes 7900</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-2Adults-F.jpeg" data-price="Kes 7200" data-description="Gessi">
+                 </div>
+                 <h2 id="description">Bed for 2 Adults<h2>
+                 <h3 id="price">Kes 7200</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-2Adults-G.jpeg" data-price="Kes 5800" data-description="Luigi Di Savoia">
+                 </div>
+                 <h2 id="description">Bed for 2 Adults<h2>
+                 <h3 id="price">Kes 5800</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-2Adults-H.jpeg" data-price="Kes 6700" data-description="Meru">
+                 </div>
+                 <h2 id="description">Bed for 2 Adults<h2>
+                 <h3 id="price">Kes 6700</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-2Adults-I.jpeg" data-price="Kes 6300" data-description="Ras Deshen">
+                 </div>
+                 <h2 id="description">Bed for 2 Adults<h2>
+                 <h3 id="price">Kes 6300</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-2Adults-J.jpeg" data-price="Kes 6400" data-description="Tahat">
+                 </div>
+                 <h2 id="description">Bed for 2 Adults<h2>
+                 <h3 id="price">Kes 6400</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-2Adults-K.jpeg" data-price="Kes 6500" data-description="Toubkal">
+                 </div>
+                 <h2 id="description">Bed for 2 Adults<h2>
+                 <h3 id="price">Kes 6500</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-2Adults-L.jpeg" data-price="Kes 5000" data-description="Guna">
+                 </div>
+                 <h2 id="description">Bed for 2 Adults<h2>
+                 <h3 id="price">Kes 5000</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-2Adults-M.jpeg" data-price="Kes 5200" data-description="Choqa">
+                 </div>
+                 <h2 id="description">Bed for 2 Adults<h2>
+                 <h3 id="price">Kes 5200</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-2Adults-N.jpeg" data-price="Kes 4900" data-description="Margherita">
+                 </div>
+                 <h2 id="description">Bed for 2 Adults<h2>
+                 <h3 id="price">Kes 4900</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-2Adults-1child.jpeg" data-price="Kes 4500" data-description="Shengena">
+                 </div>
+                 <h2 id="description">Bed for 2 Adults,2 children<h2>
+                 <h3 id="price">Kes 4500</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                    <img id="imag" src="static/rooms/beds-2Adults-2children.jpeg" data-price="Kes 5000" data-description="Ramlo">
+                 </div>
+                 <h2 id="description">Bed for 2 Adults,2 children<h2>
+                 <h3 id="price">Kes 5000</h3>
+            </div>
+        </div>
+        {%if messages%}
+            <div class="warning">
+                <h2>{{messages}}</h2>
+            </div>
+        {%endif%}
+        <form method="POST">
+            <h1>Order Your Room</h1>
+            {% csrf_token %}
+            {{form.as_p}}
+            <!--p><label>Check-In Date:</label><input type="date" name="check-in-date" placeholder="dd/mm/YYYY"></p>
+            <p><label>Check-Out Date:</label><input type="date" name="check-out-date"></p-->
+            <div class="calender"></div>
+            <button type="submit" id="btnsub">Book Space</button>
+            <button id="closebtn">Close</button>
+        </form>
+        <script src="{%static 'room.js'%}"></script>
+    </body>
+</html>

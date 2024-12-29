@@ -1,0 +1,91 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+            Design| Dashboard
+        </title>
+        <link rel="stylesheet" href="{%static 'dash.css'%}">
+    </head>
+    <body>
+        <div class="top-nav">
+            <h1>Grouped Users</h1>
+            <a href="{%url 'logout'%}">SIGN OUT</a>
+        </div>
+        <div class="cmd">
+            <button>ADD</button>
+            <button>BILLS</button>
+            <button>PRINT</button>
+        </div>
+        <div class="table">
+            <table>
+                <thead>
+                    <td>S. NO</td>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Username</td>
+                    <td>Email</td>
+                    <td>Mobile contact</td>
+                    <td>Action</td>
+                </thead>
+                <tbody>
+                    {%for rec in records%}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{rec.first_name}}</td>
+                        <td>{{rec.last_name}}</td>
+                        <td>{{rec.username}}</td>
+                        <td>{{rec.email}}</td>
+                        <td>{{rec.phone}}</td>
+                        <td>
+                            <a href="" class="btn">Edit</a>
+                            <a href="" class="btn">View</a>
+                        </td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                    <td>S. NO</td>
+                    <td>Customer</td>
+                    <td>Food Item</td>
+                    <td>Quantity</td>
+                    <td>Food Price</td>
+                    <td>Food Bill</td>
+                    <td>Hostel Name</td>
+                    <td>Hostel Price</td>
+                    <td>Moved In</td>
+                    <td>Check Out</td>
+                    <td>Hostel Bill</td>
+                </thead>
+                <tbody>
+                    {%for order in orderF%}
+                        <tr>
+                            <td>{{forloop.counter}}<input type="checkbox" class="chbox"></td>
+                            <td>{{order.user.username}}</td>
+                            <td>{{order.foods_id}}</td>
+                            <td>{{order.foods_quantity}}</td>
+                            <td>{{order.foods_price}}</td>
+                            <td>{{order.foods_bill}}</td>
+                            <td>{{order.room_id}}</td>
+                            <td>{{order.room_price}}</td>
+                            <td>{{order.room_cid}}</td>
+                            <td>{{order.room_cod}}</td>
+                            <td>{{order.room_bill}}</td>
+                        </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+        <form method="POST" id="selector">
+            {%csrf_token%}
+            {{form.as_p}}
+            <button>CLOSE</button>
+        </form>
+        <!--script src="{%static 'dash.js'%}"></script-->
+        <script src="{%static 'dash.js'%}"></script>
+    </body>
+</html>

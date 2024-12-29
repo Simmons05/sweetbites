@@ -1,0 +1,16 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DashBoard|User-list</title>
+        <link type="css" href="{%static 'all.css'%}">
+    </head>
+    <body>
+        <h1>Amazing Content</h1>
+        <form method="POST">
+            {{form.as_p}}
+            <button type="submit" class="btn-green">Save</button>
+            {% csrf_token %}
+        </form>
+    </body>
+</html>

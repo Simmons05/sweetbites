@@ -1,0 +1,28 @@
+{%load static%}
+<!DOCTYPE html>
+<lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>ACCOUNTS | SIGNIN</title>
+        <link rel="stylesheet" href="{% static 'signin.css'%}">
+    </head>
+    <body>
+        <h1>LOGIN</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="SIGNIN">
+            <label class="not">Don't have an account?</label>
+            <a href="{%url 'register'%}">SIGNUP</a>
+        </form>
+        {%if messages%}
+            <div class="alerts">
+                {%for message in messages%}
+                    <h2>{{message}}</h2>
+                {%endfor%}
+            </div>
+        {%endif%}
+    </body>
+</html>

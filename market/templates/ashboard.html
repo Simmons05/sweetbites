@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+            Design| Dashboard
+        </title>
+        <link rel="stylesheet" href="C:/Users/NJEHIA/Desktop/BACKEND/shop/market/static/dash.css">
+    </head>
+    <body>
+        <h1>Grouped Users</h1>
+        <table>
+            <thead>
+                <td>S. NO</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Username</td>
+                <td>Email</td>
+                <td>Mobile contact</td>
+                <td>Action</td>
+            </thead>
+            <tbody>
+                {%for rec in records%}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{rec.first_name}}</td>
+                    <td>{{rec.last_name}}</td>
+                    <td>{{rec.username}}</td>
+                    <td>{{rec.email}}</td>
+                    <td>{{rec.phone}}</td>
+                    <td>
+                        <a href="/changedetails/{{rec.id}}" class="btn">Edit</a>
+                        <a href="/changedetails/{{rec.id}}" class="btn">Delete</a>
+                        <a href="/changedetails/{{rec.id}}" class="btn">View</a>
+                    </td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </body>
+</html>

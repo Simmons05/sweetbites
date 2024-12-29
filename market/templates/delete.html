@@ -1,0 +1,16 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DashBoard|Admin</title>
+        <link type="css" href="{%static 'all.css'%}">
+    </head>
+    <body>
+        <h1>Amazing Content</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="danger">Confirm</button>
+            <a href="/" class="success">Back</a>
+        </form>
+    </body>
+</html>

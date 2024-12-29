@@ -1,0 +1,38 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>www.fivestar.co.uk</title>
+        <link rel="stylesheet" href="{%static 'start.css'%}">
+    </head>
+    <body>
+        <nav>
+            <li><a href="{%url 'register'%}">SIGN UP</a></li>
+            <li><a href="{%url 'login'%}">SIGN IN</a></li>
+        </nav>
+        <div class="banner">
+            <h1>Get Spacious guest rooms<br>& Favorite Delicacies, all at <em>15% </em>off</h1>
+        </div>
+        <div class="flash">
+            <div class="card">
+                <img src="static/rooms/bedroom-1Adult-spec.jpeg">
+            </div>
+            <div class="card">
+                <img src="static/food/Food-adv.jpg">
+            </div>
+            <div class="card">
+                <img src="static/food/Food-advert.jpg">
+            </div>
+            <div class="circles">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        <div class="eng">
+            <h1>Developed by Sammy Njenga:Simmons&copy;2024</h1>
+        </div>
+    </body>
+</html>

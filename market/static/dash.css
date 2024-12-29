@@ -1,0 +1,320 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    background:burlywood;
+    width:100%;
+    height:100%;
+}
+form{
+    background:green;
+    width:30%;
+    margin:10% auto;
+    display:block;
+    height:100px;
+    position:relative;
+    top:0px;
+    left:10%;
+}
+.hidden{
+    display:none;
+}
+.top-nav{
+    width:100%;
+    padding:7px 15px;
+    background:darkslategrey;
+    z-index:100;
+}
+h1{
+    color:white;
+    text-align:center;
+    padding:4px 5px;
+}
+.top-nav a{
+    padding:10px 7px;
+    background:black;
+    color:white;
+    text-decoration:none;
+    border-radius:2px;
+}
+.cmd{
+    background:white;
+    width:20%;
+    height:100px;
+    margin:10px auto;
+    padding:12px 7px;
+}
+.cmd button:first-child{
+    background:black;
+    color:white;
+    float:left;
+    padding:12px 10px;
+    border:none;
+}
+.cmd button:nth-child(2){
+    background:darkorange;
+    color:white;
+    padding:12px 6px;
+    margin-left:10px;
+    border:none;
+}
+.cmd button:nth-child(3){
+    background:steelblue;
+    color:white;
+    padding:12px 10px;
+    margin-left:10px;
+    border:none;
+}
+table{
+    width:40%;
+    margin:20px auto;
+    background:white;
+    padding:12px 7px;
+    border-collapse: collapse;
+}
+thead{
+    background:darkblue;
+    padding:2px 5px;
+    color:white;
+}
+thead td{
+    padding:2px 7px;
+    text-align:center;
+}
+tbody{
+    padding:2px 4px;
+}
+tbody td{
+    text-align:center;
+}
+tbody td:last-child{
+    width:max-content;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+}
+tbody tr:nth-child(even){
+    background:crimson;
+    color:wheat;
+}
+.chbox{
+    display:none;
+}
+a{
+    text-decoration:none;
+    color:white;
+    display:inline-block;
+    padding:4px 15px;
+    margin:3px;
+}
+a:nth-child(1){
+    background:rebeccapurple;
+    /*float:left;*/
+}
+a:nth-child(2){
+    background:orangered;
+    /*float:right;*/
+}
+a:nth-child(3){
+    background:dodgerblue;
+    /*float:right;*/
+}
+button:last-child{
+    background:black;
+    color:white;
+    padding:4px 7px;
+}
+@media only screen and (min-width:450px){
+    body{
+        width:100%;
+        overflow:hidden;
+    }
+    form{
+        width:90%;
+        height:400px;
+        background:white;
+        position:absolute;
+        top:20%;
+        left:5%;
+    }
+    .top-nav{
+        width:100%;
+        position:fixed;
+        top:0;
+        left:0;
+    }
+    .cmd{
+        position:absolute;
+        top:120px;
+        left:10px;
+        display:flexbox;
+        width:100%;
+        margin:10px;
+        height:max-content;
+    }
+    .table{
+        width:50%;
+        position:absolute;
+        top:30%;
+        left:20px;
+        padding:12px 7px;
+    }
+    table{
+        width:100%;
+    }
+}
+@media only screen and (min-width:600px){
+    body{
+        width:100%;
+        overflow:hidden;
+    }
+    form{
+        width:60%;
+        background-color: white;
+        position:absolute;
+        top:70px;
+        left:20%;
+        height:400px;
+    }
+    .top-nav{
+        width:100%;
+        position:fixed;
+        top:0;
+        left:0;
+    }
+    .cmd{
+        position:absolute;
+        top:120px;
+        left:10px;
+        display:flexbox;
+        width:90%;
+        margin:10px;
+        height:max-content;
+        background:dodgerblue;
+    }
+    .table{
+        width:50%;
+        position:absolute;
+        top:30%;
+        left:20px;
+        padding:12px 7px;
+    }
+    table{
+        width:100%;
+    }
+}
+@media only screen and (min-width:768px){
+    body{
+        width:100%;
+        overflow:hidden;
+    }
+    form{
+        width:50%;
+        background-color: white;
+        top:50px;
+        left:20%;
+        height:400px;
+    }
+    .top-nav{
+        width:100%;
+        position:fixed;
+        top:0;
+        left:0;
+    }
+    .cmd{
+        position:absolute;
+        top:120px;
+        left:10px;
+        display:flexbox;
+        width:50%;
+        margin:10px;
+        height:max-content;
+    }
+    .table{
+        width:40%;
+        position:absolute;
+        top:30%;
+        left:20px;
+        padding:12px 7px;
+    }
+    table{
+        width:100%;
+    }
+}
+@media only screen and (min-width:960px){
+    body{
+        width:100%;
+        overflow:hidden;
+    }
+    form{
+        width:45%;
+        background-color: white;
+        top:40px;
+        left:25%;
+        height:400px;
+    }
+    .top-nav{
+        width:100%;
+        position:fixed;
+        top:0;
+        left:0;
+    }
+    .cmd{
+        position:absolute;
+        top:100px;
+        left:10px;
+        display:flexbox;
+        width:30%;
+        margin:10px;
+        height:max-content;
+    }
+    .table{
+        width:25%;
+        position:absolute;
+        top:25%;
+        left:10%;
+        padding:12px 7px;
+    }
+    table{
+        width:100%;
+    }
+}
+@media only screen and (min-width:1200px){
+    body{
+        width:100%;
+        overflow:hidden;
+    }
+    form{
+        width:30%;
+        background-color: white;
+        top:50px;
+        left:30%;
+        height:400px;
+    }
+    .top-nav{
+        width:100%;
+        position:fixed;
+        top:0;
+        left:0;
+    }
+    .cmd{
+        position:absolute;
+        top:120px;
+        left:10px;
+        display:flexbox;
+        width:50%;
+        margin:10px;
+        height:max-content;
+    }
+    .table{
+        width:50%;
+        position:absolute;
+        top:25%;
+        left:20px;
+        padding:12px 7px;
+    }
+    table{
+        width:100%;
+    }
+}

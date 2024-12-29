@@ -1,0 +1,48 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>DashBoard|{{user.username}}</title>
+        <link rel="stylesheet" href="{%static 'pasg.css'%}">
+        <link rel="stylesheet" href="{%static 'bootstrap/css/bootstrap.min.css'%}">
+        <link rel="stylesheet" href="{%static 'bootstrap/css/bootstrap.css'%}">
+    </head>
+    <body style="background:rgba(0, 0, 0, 0.801);">
+        <h2 style="color:white;background:darkblue;width:30%;text-align:center;margin:20px auto;padding:4px;">Change Your Password</h2>
+        <form method="POST" style="margin:0px auto;">
+            {% csrf_token %}
+            <div class="row g-3">
+                <div class="col-md-12">
+                    <label for="inputPassword4" class="form-label">Old Password</label>
+                    {{form.old_password}}
+                    <!--input type="password" class="form-control" placeholder="Old Password"-->
+                </div>
+                <div class="col-md-12">
+                    <label for="inputPassword4" class="form-label">New Password</label>
+                    {{form.new_password1}}
+                    <!--input type="password" class="form-control" placeholder="New Password"-->
+                </div>
+                <div class="col-md-12">
+                    <label for="inputPassword4" class="form-label">confirm Password</label>
+                    {{form.new_password2}}
+                    <!--input type="password" class="form-control" placeholder="Confirm New Password"-->
+                </div>
+            </div>
+            <h4>Rules:</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">1.Password can't be too similar to others</li>
+                <li class="list-group-item">2.Password must 8 characters minimum</li>
+                <li class="list-group-item">3.Password can't be commonly used password</li>
+                <li class="list-group-item">4.Password can't be entirely numeric</li>
+            </ul>
+            <input type="submit" value="Save">
+        </form>
+        {%if messages%}
+        <div class="alerts">
+            <h3>{{messages}}</h3>
+        </div>
+        {%endif%}
+    </body>
+</html>

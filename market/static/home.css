@@ -1,0 +1,316 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    display:inline-block;
+}
+form{
+    z-index:1;
+    width:25%;
+    height:max-content;
+    padding:4px 7px;
+    margin:0px auto;
+    background:transparent;
+    position:absolute;
+    top:60px;
+    left:40%;
+    background-attachment: fixed;
+    display:none;
+    background:white;
+}
+form h2{
+    width:max-content;
+    padding:2px 8px;
+    color:white;
+    background:black;
+}
+form h2:hover{
+    background:red;
+    cursor:pointer;
+}
+form h1{
+    width:100%;
+    background:blue;
+    padding:4px 7px;
+    color:white;
+    text-align:center;
+}
+form p{
+    display:grid;
+    margin-top:10px;
+    padding:5px 8px;
+}
+form input{
+    padding:9px 6px;
+}
+form input[type=submit]{
+    border:none;
+    color:white;
+    width:100%;
+    background:orangered;
+}
+#menu{
+    width:20%;
+    height:100%;
+    margin-left:20px;
+    background:black;
+    list-style-type:none;
+    padding-top:20px;
+    padding-left:16px;
+    padding-right:16px;
+    position:absolute;
+    right:0;
+    top:0;
+    display:none;
+}
+#menu li{
+    padding:10px 12px;
+    color:white;
+    text-align:center;
+}
+#menu li:hover{
+    background:crimson;
+    cursor:pointer;
+}
+#menu li a{
+    text-decoration:none;
+    color:white;
+}
+.pane{
+    position:relative;
+    top:0;
+    left:0;
+    width:100%;
+    height:max-content;
+    padding:30px 8px;
+    background:black;
+}
+.pane h2{
+    color:white;
+    float:left;
+    position:absolute;
+    top:15px;
+}
+.menu-icon{
+    width:50px;
+    height:max-content;
+    background:dodgerblue;
+    float:right;
+    position:absolute;
+    right:0;
+    top:10px;
+    margin-right:6px;
+    padding:4px;
+    margin-bottom:4px;
+}
+.bar1,.bar2,.bar3{
+    width:40px;
+    padding:4px 6px;
+    background:white;
+}
+.bar1{
+    margin-top:4px;
+    margin-bottom: 2px;
+    top:5px;
+}
+.bar3{
+    margin-top:2px;
+    margin-bottom:4px;
+}
+.main{
+    background:green;
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    display:grid;
+}
+#container{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    background:blue;
+    height:100%;
+}
+.container{
+    position:absolute;
+    top:0;
+    left:0;
+    width:calc(80% - 10px);
+    right:calc(20% + 10px);
+}
+.content{
+    width:100%;
+    height:max-content;;
+    position:relative;
+    top:0;
+    /*overflow-y: scroll;*/
+}
+#tab1{
+    background:grey;
+    width:100%;
+    height:100%;
+    position:relative;
+    top:0;
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+}
+#tab2{
+    background:cadetblue;
+    width:100%;
+    height:100%;
+    position:relative;
+    top:0;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+}
+#tab3{
+    background:seagreen;
+    width:100%;
+    height:100%;
+    position:relative;
+    top:0;
+    display:none;
+}
+#tab4{
+    background:orangered;
+    width:100%;
+    height:100%;
+    position:relative;
+    top:0;
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    overflow-y:scroll;
+}
+.image-frame{
+    border:1px solid #ddd;
+    padding:5px 9px;
+    position:relative;
+    height:220px;
+    background:blue;
+    /*float:left;*/
+    margin:4px 8px;
+}
+.image-frame img{
+    width:100%;
+    height:80%;
+    padding:4px;
+}
+.image-info{
+    font-size:12px;
+    margin-top:10px;
+}
+.image-frame p{
+    display:block;
+    color:white;
+    text-align:center;
+}
+#menu li.active {
+    background-color: crimson;
+}
+.box{
+    position:absolute;
+    background:wheat;
+    padding:4px 12px;
+    width:100%;
+    height:max-content;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.card-b{
+    margin-top:10px;
+    width:90%;
+    height:120px;
+    background:white;
+    padding:10px 25px;
+    grid-gap:10px;
+    margin-left:5px;
+    margin-bottom:10px;
+}
+.card-b >h2{
+    color:crimson;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:18px;
+    font-style: italic;
+}
+.card-b>p{
+    margin-top:6px;
+}
+.card-b>p>span{
+    color:blue;
+}
+.orders{
+    /*background:green;*/
+    width:100%;
+    height:max-content;
+    padding:4px 9px;
+    height:max-content;
+    display:grid;
+    position:absolute;
+    top:160px;
+    float:left;
+    grid-template-rows:  repeat(2,1fr);
+}
+table{
+    margin:4px;
+    background:white;
+    width:50%;
+    padding:4px 7px;
+    float:left;
+    grid-gap:2em;
+}
+table::before{
+    background:crimson;
+    transform:skew(30deg);
+}
+table::after{
+    background:red;
+    transform:skew(30deg);
+}
+table thead{
+    background:orangered;
+    color:white;
+    text-align: center;
+}
+table tr:nth-child(even){
+    color:darkblue;
+    background:dodgerblue;
+}
+table tbody td{
+    text-align:center;
+}
+.plag{
+    width:80px;
+    height:80px;
+}
+.circle{
+    position:fixed;
+    top:250px;
+    left:800px;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    background-color: transparent;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border:4px solid transparent;
+}
+.widget{
+    position:absolute;
+    width:50px;
+    height:50px;
+    background-color: lightgreen;
+    border-radius:50%;
+    transition:all 0.3s ease-in-out;
+}
+.spanner{top:-20px;left:40%;background:lawngreen;}
+.book{top:40%;right:-20px;background:blue;}
+.bicycle{bottom:-20px;left:40%;background:black;}
+.cup{top:40%;left:-20px;background:rebeccapurple;}
+.widget:hover{
+    transform:translateX(0) translateY(0);
+}

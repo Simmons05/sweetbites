@@ -1,0 +1,17 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>SESSION| EXPIRED LOGIN</title>
+        <link rel="stylesheet" href="{%static 'log.css'%}">
+    </head>
+    <body>
+        <form method="POST">
+            <label>Your session has been terminated,Please signin</label>
+            <a href="{%url 'index'%}">SIGNIN</a>
+            <a href="{%url 'register'%}">SIGNUP</a>
+        </form>    
+    </body>
+</html>

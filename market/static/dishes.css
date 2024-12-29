@@ -1,0 +1,181 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    background:green;
+}
+h1{
+    text-align:center;
+    color:white;
+}
+form{
+    width:30%;
+    height:max-content;
+    background:white;
+    position:fixed;
+    top:50px;
+    left:30%;
+    padding: 4px 9px;
+    z-index:10;
+    display:none;
+    background-attachment: fixed;
+}
+form h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:white;
+    background:darkcyan;
+    position:relative;
+    width:100%;
+    top:2px;
+}
+form label{
+    color:blue;
+}
+form p{
+    padding:10px 12px;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+}
+input{
+    padding:9px 6px;
+}
+button[type=submit]{
+    width:100%;
+    border:none;
+    padding:10px 8px;
+    color:white;
+    background:orangered;
+    margin-bottom:10px;
+}
+#closebtn{
+    border:none;
+    padding:12px 10px;
+    background:cyan;
+    color:blue;
+    float:right;
+}
+.foods-panel{
+    background:white;
+    width:100%;
+    height:100%;
+    padding:8px 12px;
+    grid-template-columns: repeat(5,1fr);
+    display:grid;
+}
+.card{
+    background:blue;
+    display:block;
+    float:left;
+    grid-gap:10px;
+    margin:10px;
+}
+.picture{
+    width:100%;
+    height:75%;
+    background:blueviolet;
+    float:left;
+}
+h2{
+    color:white;
+    display:block;
+    padding:3px 5px;
+    font-size:20px;
+}
+h3{
+    color:white;
+    display:block;
+    padding:3px 5px;
+    font-size:16px;
+}
+img{
+    width:100%;
+    height:100%;
+}
+img:hover{
+    cursor:pointer;
+}
+@media only screen and (min-width:360px){
+    .foods-panel{
+        background:white;
+        width:100%;
+        height:100%;
+        padding:8px 12px;
+        grid-template-columns: repeat(1,1fr);
+        display:grid;
+    }
+    .card{
+        display:block;
+        background:crimson;
+        grid-gap:10px;
+        margin:10px;
+        background:crimson;
+    }
+}
+@media only screen and (min-width:600px){
+    .foods-panel{
+        background:white;
+        width:100%;
+        height:100%;
+        padding:8px 12px;
+        grid-template-columns: repeat(2,1fr);
+        display:grid;
+    }
+    .card{
+        display:block;
+        background:crimson;
+        grid-gap:10px;
+        margin:10px;
+        background:dodgerblue;
+    }
+}
+@media only screen and (min-width:768px){
+    .foods-panel{
+        background:white;
+        width:100%;
+        height:100%;
+        padding:8px 12px;
+        grid-template-columns: repeat(3,1fr);
+        display:grid;
+    }
+    .card{
+        display:block;
+        background:crimson;
+        grid-gap:10px;
+        margin:10px;
+        background:orangered;
+    }
+}
+@media only screen and (min-width:960px){
+    .foods-panel{
+        background:white;
+        width:100%;
+        height:100%;
+        padding:8px 12px;
+        grid-template-columns: repeat(4,1fr);
+        display:grid;
+    }
+    .card{
+        display:block;
+        background:crimson;
+        grid-gap:10px;
+        margin:10px;
+    }
+}
+@media only screen and (min-width:1200px){
+    .foods-panel{
+        background:white;
+        width:100%;
+        height:100%;
+        padding:8px 12px;
+        grid-template-columns: repeat(5,1fr);
+        display:grid;
+    }
+    .card{
+        display:block;
+        background:blue;
+        grid-gap:10px;
+        margin:10px;
+    }
+}

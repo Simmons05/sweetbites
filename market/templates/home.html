@@ -1,0 +1,154 @@
+{%load static%}
+<!DOCTYPE html>
+<lang="en-us">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>SHOPIKA|FillYourBasket</title>
+        <link rel="stylesheet" href="{% static 'home.css'%}">
+    </head>
+    <body>
+        <div class="main">
+            <div class="container" id="container">
+                {%block content%}
+                <div class="pane">
+                    <h2 id="userid">Welcome, {{user.username}}</h2>
+                    <div class='menu-icon' id="bar">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </div>
+                {%endblock%}
+                <form method="POST" class="hidden" >
+                    <h2 id="close">&times;</h2>
+                    <h1>Start Your Order</h1>
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <input type="submit" value="Place Order">
+                </form>
+                <div class="content" id="tab1">
+                    <div class="box">
+                        <div class="card-b">
+                            <h2>Notices</h2>
+                            <p>You have 2 remaining days to vacate</p>
+                        </div>
+                        <div class="card-b">
+                            <h2>My Services</h2>
+                            <p>Your room is to be cleaned</p>
+                        </div>
+                        <div class="card-b">
+                            <h2>My Orders</h2>
+                            <p>
+                                {%if myfoods%}
+                                    {%for bill in myfoods%}
+                                        <span> {{bill.food_id}}-</span>
+                                        <span>Kes {{bill.food_bill}}</span><br>
+                                    {%endfor%}
+                                {%endif%} 
+                            </p>
+                        </div>
+                        <div class="card-b">
+                            <h2>My Bills</h2>
+                            <p>
+                                Current bill:
+                                {%if myrooms%}
+                                    {%for bill in myrooms%}
+                                        <br><span id="tbill">Kes {{bill.room_bill}}</span><br>
+                                    {%endfor%}
+                                {%endif%}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="orders">
+                        {%if myfoods%}
+                            <table>
+                                <thead>
+                                    <td>S.NO</td>
+                                    <td>Order Name</td>
+                                    <td>Order Photo</td>
+                                    <td>Order Quantity</td>
+                                    <td>Price</td>
+                                    <td>Billings</td>
+                                </thead>
+                                <tbody>
+                            {%for order in myfoods%}
+                                <tr>
+                                    <td>{{forloop.counter}}</td>
+                                    <td>{{order.food_id}}</td>
+                                    <td><img class="plag" src="static/food/{{order.food_photo}}"></td>
+                                    <td>{{order.food_quantity}}</td>
+                                    <td>Kes{{order.food_price}}</td>
+                                    <td id="fb">Kes{{order.food_bill}}</td>
+                                </tr>
+                            {%endfor%}
+                                </tbody>
+                            </table>
+                        {%endif%}
+                        {%if myrooms%}
+                            <table>
+                                <thead>
+                                    <td>S.NO</td>
+                                    <td>Room ID</td>
+                                    <td>Appearance</td>
+                                    <td>Price/Day</td>
+                                    <td>Checked In</td>
+                                    <td>Check Out</td>
+                                    <td>Billings</td>
+                                </thead>
+                                <tbody>
+                            {%for order in myrooms%}
+                                <tr>
+                                    <td>{{forloop.counter}}</td>
+                                    <td>{{order.room_id}}</td>
+                                    <td><img class="plag" src="static/rooms/{{order.room_photo}}"></td>
+                                    <td>Kes{{order.room_price}}</td>
+                                    <td>{{order.room_cid}}</td>
+                                    <td>{{order.room_cod}}</td>
+                                    <td id="rb">Kes{{order.room_bill}}</td>
+                                </tr>
+                            {%endfor%}
+                                </tbody>
+                            </table>
+                        {%endif%}
+                    </div>    
+                </div>
+                <div class="content" id="tab2">
+                    <div class="circle">
+                        <div class="widget spanner"></div>
+                        <div class="widget book"></div>
+                        <div class="widget bicycle"></div>
+                        <div class="widget cup"></div>
+                    </div>
+                </div>
+                <div class="content" id="tab3">
+                    
+                </div>
+                <div class="content" id="tab4">
+                    
+                </div>
+            </div>
+            <ul id="menu" class="menu">
+                <li class="tablink" id="t1"><a>Dashboard</a></li>
+                <li class="tablink" id="t2"><a>Food Galleria</a></li>
+                <li class="tablink" id="t3">Profile</li>
+                <li class="tablink" id="t4">Room Galleria</li>
+                <li><a href="{%url 'password_change'%}">Change Password</a></li>
+                <li><a href="{%url 'accomodation'%}">Book Accomodation</a></li>
+                <li ><a href="{%url 'dishes'%}">Order Food</a></li>
+                <li><a href="{%url 'logout'%}">Log Out</a></li>
+            </ul>
+        <div>
+        <script src="{%static 'home.js'%}"></script>
+        <script src="{%static 'dishes.js'%}"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+

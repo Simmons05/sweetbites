@@ -1,0 +1,123 @@
+{%load static%}
+<!DOCTYPE html>
+<lang="en-us">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>SHOPIKA|FillYourStomach</title>
+        <link rel="stylesheet" href="{% static 'dishes.css'%}">
+    </head>
+    <body>
+        <h1>Amazing Dishes</h1>
+        <div class="foods-panel">
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                   <img id="imag" src="static/food/barbeque-mix.jpg" data-price="Kes 900" data-description="Barbeque">
+                </div>
+                <h2 id="description">Barbeque<h2>
+                <h3 id="price">Kes 900</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                   <img id="imag" src="static/food/brooke-lark-oaz.jpg" data-price="Kes 3200" data-description="Brooke Lark N Wine">
+                </div>
+                <h2 id="description">Brooke Lark N Wine<h2>
+                <h3 id="price">Kes 3200</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                   <img id="imag" src="static/food/cake-candy.jpg" data-price="Kes 1200" data-description="Creamed cake">
+                </div>
+                <h2 id="description">Creamed cake<h2>
+                <h3 id="price">Kes 1200</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                   <img id="imag" src="static/food/Cookie.jpg" data-price="Kes 850" data-description="Marinated Cookie">
+                </div>
+                <h2 id="description">Marinated Cookie<h2>
+                <h3 id="price">Kes 850</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                   <img id="imag" src="static/food/cool-crunchies.jpg"  data-price="Kes 1150" data-description="Grilled Crunchies">
+                </div>
+                <h2 id="description">Grilled Crunchies <h2>
+                <h3 id="price">Kes 1150</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                   <img id="imag" src="static/food/food-A.jpg" data-price="Kes 900" data-description="Hotties">
+                </div>
+                <h2 id="description">Hotties<h2>
+                <h3 id="price">Kes 900</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                   <img id="imag" src="static/food/french-dish.jpg" data-price="Kes 1000" data-description="French fries extra">
+                </div>
+                <h2 id="description">Chips masala/french dish<h2>
+                <h3 id="price">Kes 1000</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                   <img id="imag" src="static/food/hot-dog.jpg" data-price="Kes 980" data-description="Hot dog">
+                </div>
+                <h2 id="description">Mishikaki/ hot-dog<h2>
+                <h3 id="price">Kes 980</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                   <img id="imag" src="static/food/Korean-succi-dish.jpg" data-price="Kes 1050" data-description="Korean Succi">
+                </div>
+                <h2 id="description">Korean Succi<h2>
+                <h3 id="price">Kes 1050</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                   <img id="imag" src="static/food/mexican-kik-dish.jpg" data-price="Kes 1250" data-description="Mexican-kikuyu dish">
+                </div>
+                <h2 id="description">Mexican/Kikuyu Dish<h2>
+                <h3 id="price">Kes 1250</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                   <img id="imag" src="static/food/pizza.jpg" data-price="Kes 1500" data-description="Maccoroni Pizza">
+                </div>
+                <h2 id="description">Maccoroni Pizza<h2>
+                <h3 id="price">Kes 1500</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                   <img id="imag" src="static/food/puddin-melon.jpg" data-price="Kes 700" data-description="Fruit salad">
+                </div>
+                <h2 id="description">Fruit salad<h2>
+                <h3 id="price">Kes 700</h3>
+            </div>
+            <div class="card" id="fram">
+                <div class="picture" id="pic">
+                   <img id="imag" src="static/food/Tortilla.jpg" data-price="Kes 300" data-description="Tortilla">
+                </div>
+                <h2 id="description">Tortilla<h2>
+                <h3 id="price">Kes 300</h3>
+            </div>
+        </div>
+        <form method="POST">
+            <h1>Order Your Dishes</h1>
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Place Order</button>
+            <button id="closebtn">Close</button>
+        </form>
+        <script src="{%static 'dishes.js'%}"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
