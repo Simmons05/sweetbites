@@ -1,0 +1,13 @@
+servers:
+  - name: "US-East-1 (Sample)"
+    ovpn_config_path: "/absolute/path/to/us-east-1.ovpn"
+    auth_user_pass_path: "/absolute/path/to/credentials.txt"  # optional: file with two lines: username, password
+    extra_args: []  # optional extra openvpn CLI args
+    use_sudo: true  # set to false if openvpn runs without sudo in your environment
+    openvpn_path: "openvpn"  # absolute path if not in PATH
+  - name: "US-West-1 (Sample)"
+    ovpn_config_path: "/absolute/path/to/us-west-1.ovpn"
+    auth_user_pass_path: null
+    extra_args: []
+    use_sudo: true
+    openvpn_path: "openvpn"
